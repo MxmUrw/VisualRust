@@ -1,5 +1,5 @@
 #![feature(panic_handler)]
-#![feature(unsafe_no_drop_flag)]
+//#![feature(unsafe_no_drop_flag)]
 
 extern crate toml_document;
 extern crate winapi;
@@ -648,7 +648,7 @@ impl<T> RawSlice<T> {
 }
 
 #[repr(C)]
-#[unsafe_no_drop_flag]
+//#[unsafe_no_drop_flag]
 pub struct OwnedSlice<T> {
     data: RawSlice<T>
 }
